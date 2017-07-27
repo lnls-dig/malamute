@@ -1330,7 +1330,7 @@ s_server_config_global (s_server_t *self)
     int background = atoi (
         zconfig_get (self->config, "server/background", "0"));
     if (!background)
-        zsys_set_logstream (stdout);
+        zsys_set_logstream (NULL);
 }
 
 static s_server_t *
